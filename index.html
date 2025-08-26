@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Reps Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>APT Workout Reps Counter</h1>
+
+        <div id="exercise-list-container">
+            <h2>Choose an Exercise</h2>
+            <ul id="exercise-list">
+                <!-- Pre-populated exercises will go here -->
+            </ul>
+            <div id="add-exercise-form">
+                <h3>Add New Exercise</h3>
+                <input type="text" id="new-exercise-name" placeholder="Exercise Name">
+                <button id="add-exercise-btn">Add Exercise</button>
+            </div>
+        </div>
+
+        <div id="workout-container" class="hidden">
+            <h2 id="current-exercise"></h2>
+            <div class="workout-controls">
+                <label for="reps">Reps:</label>
+                <input type="number" id="reps" value="10" min="1">
+                <label for="sets">Sets:</label>
+                <input type="number" id="sets" value="3" min="1">
+                <label for="hold-time">Hold Time (s):</label>
+                <input type="number" id="hold-time" value="5" min="0">
+                <label for="rest-time">Rest Time (s):</label>
+                <input type="number" id="rest-time" value="10" min="0">
+            </div>
+            <button id="start-workout-btn">Start Workout</button>
+            <button id="stop-workout-btn" class="hidden">Stop Workout</button>
+            <p id="status"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
